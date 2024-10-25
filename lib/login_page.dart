@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         changeButton = true;
       });
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       await Navigator.pushNamed(context, myroutes.homeroutes);
       setState(() {
         changeButton = false;
@@ -32,12 +32,12 @@ class _LoginPageState extends State<LoginPage> {
         color: Colors.white,
         child: Column(children: [
           Image.asset("assets/images/home_images.jpeg"),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Text(
             "welcome$name",
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 58,
               fontWeight: FontWeight.bold,
             ),
@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: " Enter UserName", labelText: "UserName"),
                     validator: (value) {
                       if (value!.isEmpty) {
@@ -65,15 +65,15 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   TextFormField(
                     obscureText: true,
-                    decoration: InputDecoration(
-                      hintText: " Enter passworld",
-                      labelText: "passworid",
+                    decoration: const InputDecoration(
+                      hintText: " Enter password",
+                      labelText: "password",
                     ),
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return "passworid cannot be empty";
+                        return "password cannot be empty";
                       } else if (value.length < 6) {
-                        return "passworid length shoude be atleast 6";
+                        return "password length shoude be atleast 6";
                       }
 
                       return null;
@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Material(
@@ -92,16 +92,16 @@ class _LoginPageState extends State<LoginPage> {
             child: InkWell(
               onTap: () => movietoHome(context),
               child: AnimatedContainer(
-                duration: Duration(seconds: 1),
+                duration: const Duration(seconds: 1),
                 width: changeButton ? 50 : 150,
                 height: 50,
                 alignment: Alignment.center,
                 child: changeButton
-                    ? Icon(
+                    ? const Icon(
                         Icons.done,
                         color: Colors.white,
                       )
-                    : Text(
+                    : const Text(
                         "Login",
                         style: TextStyle(
                             color: Colors.white,

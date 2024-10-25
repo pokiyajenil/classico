@@ -1,20 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 class mydrawer extends StatelessWidget {
   const mydrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final Imageurl =
+    const Imageurl =
         "https://rukminim2.flixcart.com/image/850/1000/kt4ozgw0/examination-pad/n/z/r/smart-boy-digital-reprint-clip-board-exam-pad-14x9-5-inches-original-imag6jz4qekte9mp.jpeg?q=20&crop=false";
     return Drawer(
       child: Container(
         color: Colors.teal,
         child: ListView(
           padding: EdgeInsets.zero,
-          children: [
+          children: const [
             DrawerHeader(
                 padding: EdgeInsets.zero,
                 child: UserAccountsDrawerHeader(

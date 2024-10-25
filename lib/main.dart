@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:classico/utils/routes.dart';
 import 'package:classico/widgets/Theme.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:classico/login_page.dart';
 
 void main() {
-  runApp(myapp());
+  runApp(const myapp());
 }
 
 class myapp extends StatelessWidget {
@@ -21,9 +23,9 @@ class myapp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: myroutes.homeroutes,
         routes: {
-          "/": (context) => LoginPage(),
-          myroutes.homeroutes: (context) => HomePage(),
-          myroutes.loginroutes: (context) => LoginPage(),
+          "/": (context) => const LoginPage(),
+          myroutes.homeroutes: (context) => const HomePage(),
+          myroutes.loginroutes: (context) => const LoginPage(),
         });
   }
 }

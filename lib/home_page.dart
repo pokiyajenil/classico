@@ -4,19 +4,21 @@ import 'package:classico/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("classico shopping app"),
+        title: const Text("classico shopping app"),
       ),
       body: ListView.builder(
-          itemCount: classicomodel.items.length,
-          itemBuilder: (Context, index) {
-            return ItemWidget(item: classicomodel.items[index]);
+          itemCount: classicomodel().products.length,
+          itemBuilder: (bildContext, index) {
+            return ItemWidget(item: classicomodel().products[index]);
           }),
-      drawer: mydrawer(),
+      drawer: const mydrawer(),
     );
   }
 }

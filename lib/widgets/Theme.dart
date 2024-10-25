@@ -5,7 +5,7 @@ class mytheme {
   static ThemeData lightTheme(BuildContext context) => ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: GoogleFonts.lato().fontFamily,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
             color: Colors.white,
             elevation: 0.0,
             iconTheme: IconThemeData(color: Colors.black)),
